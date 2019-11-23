@@ -7,7 +7,7 @@
       register: ipconfig
     - debug: var=ipconfig
     - name: run echo computername
-  tasks:
+#
     - name: view facts
     - debug: var=vars
     - debug: var=hostvars[inventory_hostname]
