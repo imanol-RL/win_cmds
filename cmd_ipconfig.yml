@@ -5,3 +5,7 @@
       win_command: ipconfig
       register: ipconfig
     - debug: var=ipconfig
+    - name: run echo computername
+      win_command: echo %computername%
+      register: computername
+    - debug: var=computername
