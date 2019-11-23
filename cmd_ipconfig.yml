@@ -7,9 +7,14 @@
       register: ipconfig
     - debug: var=ipconfig
 #
-    - name: view facts
-    - debug: var=vars
-    - debug: var=hostvars[inventory_hostname]
+    - name: Get hostname
+      win_command: cmd.exe /c echo %computername%
+      register: my_hostname
+    - debug: var=my_hostname
+#    
+#    - name: view facts
+#    - debug: var=vars
+#    - debug: var=hostvars[inventory_hostname]
 #      - setup:
 #        register: ansible_facts
 #      - debug: item
