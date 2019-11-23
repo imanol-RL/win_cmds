@@ -1,4 +1,5 @@
 - name: verify win_command module
+  hosts: all
   tasks:
     - name: run ipconfig and return result
       win_command: ipconfig
