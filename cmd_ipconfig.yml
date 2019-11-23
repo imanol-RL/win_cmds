@@ -6,7 +6,6 @@
       win_command: ipconfig
       register: ipconfig
     - debug: var=ipconfig
-    - name: run echo computername
 #
     - name: view facts
     - debug: var=vars
