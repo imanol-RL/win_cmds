@@ -9,7 +9,9 @@
     - name: run echo computername
   tasks:
     - name: view facts
-      - setup:
-        register: ansible_facts
-      - debug: item
-        with_dict: ansible_facts
+    - debug: var=vars
+    - debug: var=hostvars[inventory_hostname]
+#      - setup:
+#        register: ansible_facts
+#      - debug: item
+#        with_dict: ansible_facts
