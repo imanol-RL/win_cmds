@@ -1,11 +1,15 @@
 - name: verify win_command module
   hosts: all
+  gather_facts: yes
   tasks:
     - name: run ipconfig and return result
       win_command: ipconfig
       register: ipconfig
     - debug: var=ipconfig
     - name: run echo computername
-      win_command: echo %computername%
-      register: computername
-    - debug: var=computername
+  tasks:
+    - name: view facts
+      - setup:
+        register: ansible_facts
+      - debug: item
+        with_dict: ansible_facts
