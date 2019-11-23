@@ -1,0 +1,6 @@
+- name: verify win_command module
+  tasks:
+    - name: run ipconfig and return result
+      win_command: ipconfig
+      register: ipconfig
+    - debug: var=ipconfig
