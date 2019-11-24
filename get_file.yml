@@ -1,7 +1,9 @@
 # Get File from URL
-- name: Download file from URL
+- name: Get files
   hosts: all
   gather_facts: no
-  win_get_url:
-    url: https://github.com/imanol-RL/win_cmds/blob/master/cmd_ipconfig.yml
-    dest: C:\Temp\cmd_ipconfig.yml
+  tasks:
+  - name: Download file from URL
+    win_get_url:
+      url: https://github.com/imanol-RL/win_cmds/blob/master/cmd_ipconfig.yml
+      dest: C:\Temp\cmd_ipconfig.yml
