@@ -1,15 +1,22 @@
 - name: verify win_command module
   hosts: all
   gather_facts: no
+  vars:
+    test: ['192','168','14','21']
+  tasks:
+#  
+  - debug:
+      msg: "{{ test | join('.') }}"  
 #  vars:
 #    contents: "{{ lookup('file', 'c:\temp\users.txt') }}"
-  tasks:
+
 #    - debug: msg="the value of users.txt is {{ contents }}"  
     - name: Read from file
       slurp:
         src: c:\temp\users.txt
         register: users
-    - debug: msg: "{{ users['content'] | b64decode }}"
+    - debug:
+        msg: "{{ users['content'] | b64decode }}"
 #
     - name: Download file from URL
       win_get_url:
