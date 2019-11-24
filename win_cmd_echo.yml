@@ -1,0 +1,8 @@
+- name: verify win_command module
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Get hostname
+      win_command: cmd.exe /c echo %computername%
+      register: my_hostname
+    - debug: var=my_hostname
