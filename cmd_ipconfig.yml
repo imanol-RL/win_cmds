@@ -6,8 +6,8 @@
 #
   tasks:
 #  
-    - debug:
-      msg: "{{ test | join('.') }}"
+    - debug: msg: "{{ test | join('.') }}"
+
 #
     - name: Read from file
       slurp:
