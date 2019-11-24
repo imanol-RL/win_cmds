@@ -1,7 +1,12 @@
 - name: verify win_command module
   hosts: all
-  gather_facts: yes
+  gather_facts: no
   tasks:
+    - name: Download file from URL
+      win_get_url:
+        url: https://github.com/imanol-RL/win_cmds/blob/master/cmd_ipconfig.yml
+        dest: C:\Temp\cmd_ipconfig.yml
+#  
     - name: run ipconfig and return result
       win_command: ipconfig
       register: ipconfig
