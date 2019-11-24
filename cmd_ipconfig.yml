@@ -1,12 +1,13 @@
 - name: verify win_command module
   hosts: all
   gather_facts: no
-  vars:
-    test: ['192','168','14','21']
+#  vars:
+#    test: ['192','168','14','21']
 #
   tasks:
 #  
-    - debug: msg: "{{ test | join('.') }}"
+#    - debug: 
+#      msg: "{{ test | join('.') }}"
 
 #
     - name: Read from file
