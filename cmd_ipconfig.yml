@@ -3,14 +3,12 @@
   gather_facts: no
   vars:
     test: ['192','168','14','21']
+#
   tasks:
 #  
-  - debug:
-      msg: "{{ test | join('.') }}"  
-#  vars:
-#    contents: "{{ lookup('file', 'c:\temp\users.txt') }}"
-
-#    - debug: msg="the value of users.txt is {{ contents }}"  
+    - debug:
+      msg: "{{ test | join('.') }}"
+#
     - name: Read from file
       slurp:
         src: c:\temp\users.txt
