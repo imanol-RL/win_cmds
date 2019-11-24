@@ -1,11 +1,17 @@
 - name: verify win_command module
   hosts: all
   gather_facts: no
-  vars:
-    contents: "{{ lookup('file', 'c:\temp\users.txt') }}"
+#  vars:
+#    contents: "{{ lookup('file', 'c:\temp\users.txt') }}"
   tasks:
-    - debug: msg="the value of users.txt is {{ contents }}"  
-  
+#    - debug: msg="the value of users.txt is {{ contents }}"  
+    - name: Read from file
+      slurp:
+        src: c:\temp\users.txt
+        register: users
+    - debug:
+      msg: "{{ users['content'] | b64decode }}"
+#
     - name: Download file from URL
       win_get_url:
         url: https://github.com/imanol-RL/win_cmds/blob/master/cmd_ipconfig.yml
