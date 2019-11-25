@@ -10,12 +10,12 @@
 #      msg: "{{ test | join('.') }}"
 
 #
-    - name: Read from file
-      slurp:
-        src: c:\temp\users.txt
-        register: users
-    - debug:
-        msg: "{{ users['content'] | b64decode }}"
+##    - name: Read from file
+##      slurp:
+##        src: c:\temp\users.txt
+##        register: users
+##    - debug:
+##        msg: "{{ users['content'] | b64decode }}"
 #
     - name: Download file from URL
       win_get_url:
