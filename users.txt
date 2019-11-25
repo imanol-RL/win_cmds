@@ -1,0 +1,5 @@
+user,name,last,gecos,pwd
+usuario01,
+usuario02,
+usuario03,
+usuario04,
