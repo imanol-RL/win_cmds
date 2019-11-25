@@ -21,11 +21,13 @@
       win_get_url:
         url: https://github.com/imanol-RL/win_cmds/blob/master/cmd_ipconfig.yml
         dest: C:\Temp\cmd_ipconfig.yml
+        force: yes
 #
     - name: Download file from URL
       win_get_url:
-        url: https://github.com/imanol-RL/win_cmds/cmd_ipconfig.yml
-        dest: C:\Temp\cmd_ipconfig.yml
+        url: https://github.com/imanol-RL/win_cmds/blob/master/users.txt
+        dest: C:\Temp\users.txt
+        force: yes
 #
     - name: run ipconfig and return result
       win_command: ipconfig
