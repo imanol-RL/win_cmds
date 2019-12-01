@@ -8,5 +8,5 @@
     register: remote_file
 
   - debug:
-      msg: "{{ remote_file['content'] | b64decode }}"
+      AllLines: "{{ remote_file['content'] | b64decode }}"
 
