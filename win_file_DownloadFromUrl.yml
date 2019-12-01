@@ -2,10 +2,10 @@
   hosts: all
   gather_facts: no
   tasks:
-    - name: Download file 1 from URL
+    - name: Download file 1 from URL (win_file_DownloadFromUrl.yml)
       win_get_url:
-        url: https://github.com/imanol-RL/win_cmds/blob/master/cmd_ipconfig.yml
-        dest: C:\Temp\cmd_ipconfig.yml
+        url: https://github.com/imanol-RL/win_cmds/blob/master/win_file_DownloadFromUrl.yml
+        dest: C:\Temp\win_file_DownloadFromUrl.yml
         force: yes
 #
     - name: Download file 2 from URL
