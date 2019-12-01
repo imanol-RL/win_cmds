@@ -10,3 +10,10 @@
   - debug:
       msg: "{{ remote_file['content'] | b64decode }}"
 
+#ok: [192.168.122.24] => {
+#    "msg": "User01,Description01,Pwd01\r\nUser02,Description02,Pwd02\r\nUser03,Description03,Pwd03"
+#}
+
+  - debug:
+      msg: "{{ remote_file['content'] | b64decode | regex_findall('\r\n') | first }}"}}"
+
