@@ -1,0 +1,11 @@
+- name: Read Remote File and debug
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Read Remote File
+    slurp:
+      src: C:\Temp\#Ansible\Read_from_Ansible.txt
+    register: remote_file
+
+  - debug:
+    msg: "{{ remote_file['content'] | b64decode }}"
