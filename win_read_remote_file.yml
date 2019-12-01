@@ -15,5 +15,5 @@
 #}
 
   - debug:
-      msg: "{{ remote_file['content'] | b64decode | regex_findall('\r\n') | first }}"}}"
+      msg: "{{ remote_file['content'] | b64decode | regex_findall('\r\n') | first }}"
 
