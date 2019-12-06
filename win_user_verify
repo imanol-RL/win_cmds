@@ -1,0 +1,4 @@
+- name: Ensure user bob is absent
+  win_user:
+    name: IMANOL.RAMIREZ
+    state: query
