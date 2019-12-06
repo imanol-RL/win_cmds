@@ -1,4 +1,25 @@
-- name: Ensure user bob is absent
-  win_user:
-    name: IMANOL.RAMIREZ
-    state: query
+# win_user_verify.yml
+- name: Query if user exist and read properties
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Ensure user bob is absent
+    win_user:
+      name: IMANOL.RAMIREZ
+      state: query
+#
+  - name: create user
+    win_user:
+    name: imanol01	  
+      account_disabled: no
+      account_locked: no
+	  escription: 
+	  fullname: 'IBM Imanol'
+      password: 'quincecaracters'
+      password_expired: no
+      password_never_expires: no
+      state: present
+      groups:
+        - Administrators
+        - Users
+#
