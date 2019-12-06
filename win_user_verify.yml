@@ -10,11 +10,11 @@
 #
   - name: create user
     win_user:
-    name: imanol01	  
+      name: imanol01	  
       account_disabled: no
       account_locked: no
-	  escription: 
-	  fullname: 'IBM Imanol'
+      description: 'Imanol.01'
+      fullname: 'IBM Imanol'
       password: 'quincecaracters'
       password_expired: no
       password_never_expires: no
