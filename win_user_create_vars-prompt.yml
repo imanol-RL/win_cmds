@@ -4,14 +4,13 @@
   gather_facts: no
 #
   vars_prompt:
+  - name: "var_username"
+    prompt: "Username (max 15 chars)"
+    private: no
 #
-    - name: "var_username"
-      prompt: "Username (max 15 chars)"
-      private: no
-#
-    - name: "var_fullname"
-      prompt: "Full Name"
-      private: no
+  - name: "var_fullname"
+    prompt: "Full Name"
+    private: no
 #
     - name: "var_description"
       prompt: "Description"
