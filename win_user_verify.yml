@@ -3,14 +3,14 @@
   hosts: all
   gather_facts: no
   tasks:
-  - name: Ensure user bob is absent
+  - name: Query if user exist
     win_user:
       name: IMANOL.RAMIREZ
       state: query
 #
   - name: create user
     win_user:
-      name: imanol01	  
+      name: "{{ var_username }}"
       account_disabled: no
       account_locked: no
       description: "{{ var_description }}"
@@ -23,3 +23,4 @@
         - Administrators
         - Users
 #
+# 
