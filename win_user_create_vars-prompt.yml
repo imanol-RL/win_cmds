@@ -25,11 +25,11 @@
   tasks:
   - name: create user
     win_user:
-      name: "{{ var_username }}"  
+      name: "$var_username"
       account_disabled: no
       account_locked: no
-	  description: "{{ var_description }}"
-	  fullname: "{{ var_fullname }}" 
+      description: "{{ var_description }}"
+      fullname: "{{ var_fullname }}" 
       password: "{{ var_password }}"
       password_expired: no
       password_never_expires: no
