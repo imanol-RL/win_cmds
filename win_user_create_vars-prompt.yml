@@ -1,0 +1,42 @@
+#---------------------------------------------------------------------------------------------
+- name: Crate user with vars_prompts
+  hosts: all
+  gather_facts: no
+#
+  vars_prompt:
+#
+    - name: "var_username"
+      prompt: "Username (max 15 chars)"
+      private: no
+#
+    - name: "var_fullname"
+      prompt: "Full Name"
+      private: no
+#
+    - name: "var_description"
+      prompt: "Description"
+      private: no
+#
+    - name: "var_password"
+      prompt: "Password"
+      private: no
+      encrypt: "sha512_crypt"
+      salt_size: 8
+#
+  tasks:
+  - name: create user
+    win_user:
+      name: "{{ var_username }}"  
+      account_disabled: no
+      account_locked: no
+	  description: "{{ var_description }}"
+	  fullname: "{{ var_fullname }}" 
+      password: "{{ var_password }}"
+      password_expired: no
+      password_never_expires: no
+      state: present
+      groups:
+        - Administrators
+        - Users
+#---------------------------------------------------------------------------------------------
+
