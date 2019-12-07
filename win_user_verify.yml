@@ -20,7 +20,7 @@
       password_never_expires: no
       state: present
       groups:
-        - Administrators
+        - "{{ var_group }}"
         - Users
 #
 # 
