@@ -12,15 +12,15 @@
     prompt: "Full Name"
     private: no
 #
-    - name: "var_description"
-      prompt: "Description"
-      private: no
+  - name: "var_description"
+    prompt: "Description"
+    private: no
 #
-    - name: "var_password"
-      prompt: "Password"
-      private: no
-      encrypt: "sha512_crypt"
-      salt_size: 8
+  - name: "var_password"
+    prompt: "Password"
+    private: no
+    encrypt: "sha512_crypt"
+    salt_size: 8
 #
   tasks:
   - name: create user
