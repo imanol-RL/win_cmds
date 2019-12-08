@@ -18,7 +18,7 @@
       groups:
         - "{{ var_group }}"
 #        - Users
-  - name: "{{ansible_date_time.date}}" - Query if user "{{ var_username }}" exist
+  - name: {{ansible_date_time.date}} - Query if user {{ var_username }} exist
     win_user:
       name: "{{ var_username }}"
       state: query
