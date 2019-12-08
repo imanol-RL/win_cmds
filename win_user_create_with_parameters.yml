@@ -1,0 +1,31 @@
+# win_user_create_with_parameters.yml
+- name: Query if user exist and read properties
+  hosts: all
+  gather_facts: no
+  tasks:
+#
+  - name: create user
+    win_user:
+      name: "{{ var_username }}"
+      account_disabled: no
+      account_locked: no
+      description: 'IBM' "{{ var_description }}"
+      fullname: "{{ var_fullname }}"
+      password: "{{ var_pwd }}"
+      password_expired: no
+      password_never_expires: no
+      state: present
+      groups:
+        - "{{ var_group }}"
+#        - Users
+  - name: Query if user "{{ var_username }}" exist
+    win_user:
+      name: "{{ var_username }}"
+      state: query
+#
+#Example:
+#var_username: 
+#var_description
+#var_fullname
+#var_pwd
+#var_group (Administrators / Users)
