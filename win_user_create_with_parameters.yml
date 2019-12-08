@@ -9,7 +9,7 @@
       name: "{{ var_username }}"
       account_disabled: no
       account_locked: no
-      description: 'IBM' "{{ var_description }}"
+      description: "{{ var_description }}"
       fullname: "{{ var_fullname }}"
       password: "{{ var_pwd }}"
       password_expired: no
