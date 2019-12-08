@@ -24,8 +24,9 @@
       state: query
 #
 #Example:
-#var_username: 
-#var_description
-#var_fullname
-#var_pwd
-#var_group (Administrators / Users)
+#var_username: imanol_01
+#var_description: created with Ansible
+#var_fullname: Imanol 01 created with Ansible
+#var_pwd: desde.awx.
+#var_group: Administrators
+# (Administrators / Users)
