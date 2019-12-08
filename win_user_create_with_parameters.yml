@@ -27,6 +27,6 @@
 #var_username: imanol_01
 #var_description: created with Ansible
 #var_fullname: Imanol 01 created with Ansible
-#var_pwd: desde.awx.
+#var_pwd: pwddesde.awx.
 #var_group: Administrators
 # (Administrators / Users)
