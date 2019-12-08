@@ -9,7 +9,7 @@
       name: "{{ var_username }}"
       account_disabled: no
       account_locked: no
-      description: ansible_date_time.date "{{ var_description }}"
+      description: "{{ansible_date_time.date}} {{ var_description }}"
       fullname: "{{ var_fullname }}"
       password: "{{ var_pwd }}"
       password_expired: no
@@ -18,7 +18,7 @@
       groups:
         - "{{ var_group }}"
 #        - Users
-  - name: ansible_date_time.date - Query if user "{{ var_username }}" exist
+  - name: "{{ansible_date_time.date}}" - Query if user "{{ var_username }}" exist
     win_user:
       name: "{{ var_username }}"
       state: query
